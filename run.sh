@@ -1,1 +1,1 @@
-/home/simon/odoo10/openerp-server -c /home/simon/odoo10/odoo.conf
+/home/simon/odoo10/odoo-bin -c /home/simon/odoo10/odoo.conf
