@@ -256,8 +256,8 @@ class SaleOrder(models.Model):
 
     @api.model
     def create(self, vals):
-        if vals.get('name', 'New') == 'New':
-            vals['name'] = self.env['ir.sequence'].next_by_code('sale.order') or 'New'
+        if vals.get('name', _('New')) == _('New'):
+            vals['name'] = self.env['ir.sequence'].next_by_code('sale.order') or _('New')
 
         # Makes sure partner_invoice_id', 'partner_shipping_id' and 'pricelist_id' are defined
         if any(f not in vals for f in ['partner_invoice_id', 'partner_shipping_id', 'pricelist_id']):
@@ -813,6 +813,7 @@ class SaleOrderLine(models.Model):
 
     @api.multi
     def _get_display_price(self, product):
+        # TO DO: move me in master/saas-16 on sale.order
         if self.order_id.pricelist_id.discount_policy == 'without_discount':
             from_currency = self.order_id.company_id.currency_id
             return from_currency.compute(product.lst_price, self.order_id.pricelist_id.currency_id)

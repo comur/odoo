@@ -8,12 +8,12 @@
 # Ralf Hilgenstock <rh@dialoge.info>, 2016
 # Tina Rittmüller <tr@ife.de>, 2016
 # Rudolf Schnapka <rs@techno-flex.de>, 2016
+# Ermin Trevisan <trevi@twanda.com>, 2016
 # Philipp Hug <philipp@hug.cx>, 2016
 # Thorsten Vocks <thorsten.vocks@openbig.org>, 2016
 # Martin Trigaux <mat@odoo.com>, 2016
 # JackTheHunter <Maximilian.N98@gmail.com>, 2016
 # Anja Funk <anja.funk@afimage.de>, 2016
-# Ermin Trevisan <trevi@twanda.com>, 2016
 # Falk Scholze <inactive+falkscholze@transifex.com>, 2016
 # Renzo Meister <info@jamotion.ch>, 2016
 # darenkster <inactive+darenkster@transifex.com>, 2016
@@ -34,13 +34,14 @@
 # Dejan Dinic <dejan.dinic@bluewin.ch>, 2016
 # Niki Waibel <niki.waibel@gmail.com>, 2016
 # key six <mobile.umts@gmail.com>, 2016
+# Bülent Tiknas <btiknas@googlemail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-14 10:20+0000\n"
 "PO-Revision-Date: 2017-02-14 10:20+0000\n"
-"Last-Translator: key six <mobile.umts@gmail.com>, 2016\n"
+"Last-Translator: Bülent Tiknas <btiknas@googlemail.com>, 2017\n"
 "Language-Team: German (https://www.transifex.com/odoo/teams/41243/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,6 +99,10 @@ msgid ""
 " * The 'Paid' status is set automatically when the invoice is paid. Its related journal entries may or may not be reconciled.\n"
 " * The 'Cancelled' status is used when user cancel invoice."
 msgstr ""
+"* Der \"Entwurf\"-Status wird verwendet, wenn ein Benutzer eine Rechnung erstellt, aber noch nicht gebucht hat. \n"
+"* Der \"Pro-forma\" Status wird nach dessen Auswahl angezeigt, es wird aber noch keine Rechnungsnummer vergeben. * Die Rechnung ist im \"Offen\" Status, wenn Sie gebucht wurde, dadurch eine Rechnungsnummer bekommen hat, aber noch nicht vom Kunden bezahlt wurde.\n"
+" * Der\"Bezahlt\"-Status wird automatisch vergeben, wenn die offene Rechnung vom Kunden bezahlt wurde.\n"
+" * Eine Anzeige im \"Abgebrochen\"-Status erfolgt immer dann, wenn die Rechnung storniert wurde."
 
 #. module: account
 #. openerp-web
@@ -492,6 +497,16 @@ msgid ""
 msgstr ""
 "<span> (*) Diese Konfiguration bezieht sich auf die Firma, mit der Sie "
 "angemeldet sind. </span>"
+
+#. module: account
+#: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
+msgid "<span>invoice</span>"
+msgstr ""
+
+#. module: account
+#: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
+msgid "<span>refund</span>"
+msgstr ""
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
@@ -1409,7 +1424,7 @@ msgstr "Buchhaltungskonfiguration: eine Schritt-für-Schritt Anleitung."
 #. module: account
 #: model:ir.actions.act_window,name:account.open_account_journal_dashboard_kanban
 msgid "Accounting Dashboard"
-msgstr "Dashboard Finanzen"
+msgstr "Buchhaltungsdashboard"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_date
@@ -5707,7 +5722,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_kanban_dashboard
 msgid "Kanban dashboard"
-msgstr "Kanban Übersicht"
+msgstr "Kanban-Dashboard"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_kanban_dashboard_graph
@@ -6009,6 +6024,7 @@ msgstr "Rechtliche Hinweise …"
 #: model:ir.model.fields,help:account.field_account_fiscal_position_note
 msgid "Legal mentions that have to be printed on the invoices."
 msgstr ""
+"Gesetzliche Vorgaben, die auf den Rechnungen ausgegeben werden müssen."
 
 #. module: account
 #: code:addons/account/models/account_invoice.py:149
@@ -6021,7 +6037,7 @@ msgstr "Abzüglich Zahlung"
 #: code:addons/account/static/src/xml/account_reconciliation.xml:15
 #, python-format
 msgid "Let odoo try to reconcile entries for the user"
-msgstr ""
+msgstr "Lassen Sie odoo versuchen, offene Posten des Benutzers auszugleichen"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_financial_report_level
@@ -6173,7 +6189,7 @@ msgstr "Manuelle Rechnungssteuern"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_action_manual_reconciliation
 msgid "Manual Payments & Invoices Matching"
-msgstr ""
+msgstr "Manueller Zahlungs- & Rechnungsabgleich"
 
 #. module: account
 #: model:ir.actions.client,name:account.action_manual_reconciliation
@@ -6738,7 +6754,7 @@ msgid ""
 "                        to access your statements from the Accounting Dashboard. \n"
 "                        The available methods for synchronization are as follows."
 msgstr ""
-"Sind Ihre Bankkonten eingetragen, können Sie auf die Kontoauszüge über das Cockpit der Buchhaltung zugreifen.\n"
+"Sind Ihre Bankkonten eingetragen, können Sie auf die Kontoauszüge über das Dashboard der Buchhaltung zugreifen.\n"
 "Die verfügbaren Verfahren zur Synchronisation sind die Folgenden:"
 
 #. module: account
@@ -9558,7 +9574,7 @@ msgid ""
 "This is the accounting dashboard. If you have not yet\n"
 "                installed a chart of account, please install one first."
 msgstr ""
-"Dies ist das Buchhaltungs-Cockpit. Wenn Sie noch \n"
+"Dies ist das Buchhaltungsdashboard. Wenn Sie noch \n"
 "keinen Kontenplan installiert haben, machen Sie das\n"
 "bitte zuerst."
 
@@ -10143,7 +10159,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal_sequence
 msgid "Used to order Journals in the dashboard view"
-msgstr "Verwendet, um Journale im Cockpit zu sortieren"
+msgstr "Verwendet, um Journale im Dashboard zu sortieren"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal_loss_account_id

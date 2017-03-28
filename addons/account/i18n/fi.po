@@ -15,7 +15,7 @@
 # Kari Lindgren <karisatu@gmail.com>, 2016
 # Veikko Väätäjä <veikko.vaataja@gmail.com>, 2016
 # Mika Karvinen <karvinenm@gmail.com>, 2016
-# Timo Koukkari <timo.koukkari@seamk.fi>, 2016
+# Timo Koukkari <ti.ko@netikka.fi>, 2016
 # salmemik <salmemik@gmail.com>, 2016
 # Sanna Edelman <direct@generare.com>, 2016
 # Marko Happonen <marko.happonen@sprintit.fi>, 2016
@@ -591,6 +591,16 @@ msgid ""
 "into.</span>"
 msgstr ""
 "<span>(*) Tämä määrittely koskee yritystä johon olet kirjautuneena.</span>"
+
+#. module: account
+#: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
+msgid "<span>invoice</span>"
+msgstr ""
+
+#. module: account
+#: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
+msgid "<span>refund</span>"
+msgstr "<span>hyvitä</span>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
@@ -5119,7 +5129,7 @@ msgstr "Tulo"
 #: model:ir.model.fields,field_description:account.field_product_template_property_account_income_id
 #: model:ir.ui.view,arch_db:account.view_account_chart_template_seacrh
 msgid "Income Account"
-msgstr "tulotili"
+msgstr "Tulotili"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_chart_template_property_account_income_id
@@ -8338,7 +8348,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Set the default Sales and Purchase taxes"
-msgstr ""
+msgstr "Aseta oletus myynnin ja ostojen veroista"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax_tax_adjustment

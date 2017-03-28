@@ -466,6 +466,16 @@ msgstr ""
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
+msgid "<span>invoice</span>"
+msgstr ""
+
+#. module: account
+#: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
+msgid "<span>refund</span>"
+msgstr ""
+
+#. module: account
+#: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
 msgid "<span>Duplicate</span>"
 msgstr "<span>Дублікат</span>"
 
@@ -5539,7 +5549,7 @@ msgstr "Залишіть пустим для використання дати �
 #. module: account
 #: selection:account.payment,payment_difference_handling:0
 msgid "Keep open"
-msgstr "Залигити відкритим"
+msgstr "Залишити відкритим"
 
 #. module: account
 #. openerp-web

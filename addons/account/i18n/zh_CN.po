@@ -11,13 +11,14 @@
 # xiaobin wu <bd5dml@gmail.com>, 2016
 # Ted Wang <feiyuwang2012@gmail.com>, 2016
 # Godners Ren <godners@163.com>, 2017
+# Yaorong Li <55yaorong.li@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-14 10:20+0000\n"
 "PO-Revision-Date: 2017-02-14 10:20+0000\n"
-"Last-Translator: Godners Ren <godners@163.com>, 2017\n"
+"Last-Translator: Yaorong Li <55yaorong.li@gmail.com>, 2017\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -580,6 +581,16 @@ msgstr "这个配置是你登录到公司相关。"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
+msgid "<span>invoice</span>"
+msgstr "<span>发票</span>"
+
+#. module: account
+#: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
+msgid "<span>refund</span>"
+msgstr "<span>退款</span>"
+
+#. module: account
+#: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
 msgid "<span>Duplicate</span>"
 msgstr "<span>副本</span>"
 
@@ -967,7 +978,7 @@ msgstr "<strong>为了能让你尽快的熟悉Odoo，请测试是以下三种场
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid ""
 "<strong>There are three different levels of access rights in Odoo:</strong>"
-msgstr "<strong>Odoo中有三种不同的登陆权限:</strong>"
+msgstr "<strong>Odoo中有三种不同的登陆权:</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_overdue_document
@@ -1739,7 +1750,7 @@ msgstr "允许现金收付制税金"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_module_l10n_us_check_printing
 msgid "Allow check printing and deposits"
-msgstr ""
+msgstr "允许支票打印和存款"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_group_multi_currency
@@ -2835,7 +2846,7 @@ msgstr "关闭结算单"
 #: code:addons/account/static/src/xml/account_reconciliation.xml:228
 #, python-format
 msgid "Close the statements"
-msgstr ""
+msgstr "关闭结算单"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_date_done
@@ -7512,7 +7523,7 @@ msgstr "数量"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_currency_exchange_journal_id
 msgid "Rate Difference Journal"
-msgstr "比率差异日记账"
+msgstr "汇率差异日记账"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_refund_description
@@ -9302,7 +9313,7 @@ msgstr "这个标签将放在报告上用来显示根据比较筛选条件计算
 msgid ""
 "This move's amount is higher than the transaction's amount. Click to "
 "register a partial payment and keep the payment balance open."
-msgstr ""
+msgstr "llf"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_accounting_report_debit_credit
@@ -10015,7 +10026,7 @@ msgid ""
 "When inviting users, you will need to define which access rights they are allowed to have. \n"
 "                        This is done by assigning a role to each user."
 msgstr ""
-"当邀请用户时候，你需要定义他们能够登陆的权限 \n"
+"当邀请用户时候，你需要定义他们能够登陆的访问权\n"
 "                        需要通过给每个用户分配权限."
 
 #. module: account
@@ -10714,4 +10725,4 @@ msgstr "wizard.multi.charts.accounts"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_bank_statement_form
 msgid "→ Count"
-msgstr "→ 计数"
+msgstr "→ 个数"
