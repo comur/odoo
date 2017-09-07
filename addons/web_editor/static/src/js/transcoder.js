@@ -121,6 +121,16 @@ var getMatchedCSSRules = function (a) {
         }
     });
 
+    // text-decoration rule is decomposed in -line, -color and -style. This is
+    // however not supported by many browser/mail clients and the editor does
+    // not allow to change -color and -style rule anyway
+    if (style['text-decoration-line']) {
+        style['text-decoration'] = style['text-decoration-line'];
+        delete style['text-decoration-line'];
+        delete style['text-decoration-color'];
+        delete style['text-decoration-style'];
+    }
+
     return style;
 };
 
@@ -131,7 +141,7 @@ var font_to_img = function ($editable) {
         var icon, content;
         _.find(widget.fontIcons, function (font) {
             return _.find(widget.getCssSelectors(font.parser), function (css) {
-                if ($font.is(css[0].replace(/::?before$/, ''))) {
+                if ($font.is(css[0].replace(/::?before/g, ''))) {
                     icon = css[2].split("-").shift();
                     content = css[1].match(/content:\s*['"]?(.)['"]?/)[1];
                     return true;

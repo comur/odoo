@@ -14,7 +14,7 @@
 # Alejandro Santana <alejandrosantana@anubia.es>, 2016
 # José Vicente <txusev@gmail.com>, 2016
 # Leonardo Chianea <noamixcontenidos@gmail.com>, 2016
-# Luis Martínez Ontalba <luismaront@gmail.com>, 2016
+# Luis M. Ontalba <luis.martinez@tecnativa.com>, 2016
 # oihane <oihanecruce@gmail.com>, 2016
 # Carles Antoli <carlesantoli@hotmail.com>, 2016
 # Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2016
@@ -166,7 +166,7 @@ msgstr "Bloqueada"
 #: model:project.issue,legend_done:project_issue.crm_case_patcheserrorinprogram0
 #: model:project.issue,legend_done:project_issue.crm_case_programnotgivingproperoutput0
 msgid "Buzz or set as done"
-msgstr ""
+msgstr "Zumbar o marcar como hecho"
 
 #. module: project_issue
 #: model:ir.filters,name:project_issue.filter_issue_report_responsible
@@ -455,7 +455,7 @@ msgstr "Incidencia abierta"
 #. module: project_issue
 #: model:mail.message.subtype,description:project_issue.mt_issue_ready
 msgid "Issue ready for next stage"
-msgstr ""
+msgstr "Incidencia lista para la siguiente etapa"
 
 #. module: project_issue
 #: model:ir.actions.act_window,name:project_issue.act_project_project_2_project_issue_all
@@ -611,6 +611,8 @@ msgid ""
 "Override the default value displayed for the blocked state for kanban "
 "selection, when the task or issue is in that stage."
 msgstr ""
+"Anula el valor por defecto mostrado por el estado bloqueado por la selección"
+" kanban, cuando la tarea o incidencia esta en el estado."
 
 #. module: project_issue
 #: model:ir.model.fields,help:project_issue.field_project_issue_legend_done
@@ -618,6 +620,8 @@ msgid ""
 "Override the default value displayed for the done state for kanban "
 "selection, when the task or issue is in that stage."
 msgstr ""
+"Anular el valor por defecto mostrado para el estado hecho para la selección "
+"kanban, cuando la tarea o incidencia esta en el estado."
 
 #. module: project_issue
 #: model:ir.model.fields,help:project_issue.field_project_issue_legend_normal
@@ -625,6 +629,8 @@ msgid ""
 "Override the default value displayed for the normal state for kanban "
 "selection, when the task or issue is in that stage."
 msgstr ""
+"Anular el valor por defecto mostrado para el estado normal de la selección "
+"kanban, cuando la tarea o incidencia esta en el estado."
 
 #. module: project_issue
 #: model:ir.model,name:project_issue.model_res_partner
@@ -690,7 +696,7 @@ msgstr ""
 #. module: project_issue
 #: model:ir.model.fields,field_description:project_issue.field_project_config_settings_module_rating_project_issue
 msgid "Rating on issue"
-msgstr ""
+msgstr "Valoración en la incidencia"
 
 #. module: project_issue
 #: selection:project.issue,kanban_state:0
@@ -700,7 +706,7 @@ msgstr "Lista para la siguiente etapa"
 #. module: project_issue
 #: model:project.issue,legend_done:project_issue.crm_case_logicalerrorinprogram0
 msgid "Ready to reopen"
-msgstr ""
+msgstr "Preparado para reabrir"
 
 #. module: project_issue
 #: model:ir.ui.view,arch_db:project_issue.view_project_issue_report_filter
@@ -751,6 +757,12 @@ msgid ""
 "                    like internal requests, software development bugs, customer\n"
 "                    complaints, project troubles, material breakdowns, etc."
 msgstr ""
+"El gestor de incidencias de Odoo le permite gestionar eficientemente\n"
+"cuestiones como las peticiones internas, errores de desarrollo de \n"
+"software, quejas de los clientes, problemas en el proyecto, rupturas de \n"
+"material, etc.\n"
+"\n"
+"        "
 
 #. module: project_issue
 #: model:ir.model.fields,help:project_issue.field_project_issue_email_cc
@@ -758,6 +770,9 @@ msgid ""
 "These email addresses will be added to the CC field of all inbound\n"
 "        and outbound emails for this record before being sent. Separate multiple email addresses with a comma"
 msgstr ""
+"Estas direcciones de correo serán añadidas al campo CC para todos los "
+"correos entrantes y salientes de este registro antes de ser enviados. Separe"
+" las diferentes direcciones de correo con una coma."
 
 #. module: project_issue
 #: model:ir.model.fields,help:project_issue.field_project_issue_email_from
@@ -767,7 +782,7 @@ msgstr "Estas personas recibirán correo electronico."
 #. module: project_issue
 #: model:ir.model.fields,help:project_issue.field_project_config_settings_module_rating_project_issue
 msgid "This allows customers to give rating on issue"
-msgstr ""
+msgstr "Esto permite a los clientes dar una calorificación de la incidencia"
 
 #. module: project_issue
 #: model:ir.actions.act_window,help:project_issue.action_project_issue_report
@@ -792,12 +807,12 @@ msgstr "Partes de horas"
 #. module: project_issue
 #: model:ir.model.fields,field_description:project_issue.field_project_config_settings_module_project_issue_sheet
 msgid "Timesheets on Issues"
-msgstr ""
+msgstr "Parte de horas para las incidencias"
 
 #. module: project_issue
 #: selection:project.config.settings,module_rating_project_issue:0
 msgid "Track customer satisfaction on issues"
-msgstr ""
+msgstr "Seguimiento de la satisfacción del cliente en incidencias"
 
 #. module: project_issue
 #: model:ir.ui.view,arch_db:project_issue.view_project_issue_filter

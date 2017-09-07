@@ -226,11 +226,12 @@ class Repair(models.Model):
 
     @api.multi
     def action_repair_invoice_create(self):
-        self.action_invoice_create()
-        if self.invoice_method == 'b4repair':
-            self.action_repair_ready()
-        elif self.invoice_method == 'after_repair':
-            self.write({'state': 'done'})
+        for repair in self:
+            repair.action_invoice_create()
+            if repair.invoice_method == 'b4repair':
+                repair.action_repair_ready()
+            elif repair.invoice_method == 'after_repair':
+                repair.write({'state': 'done'})
         return True
 
     @api.multi
@@ -490,7 +491,10 @@ class RepairLine(models.Model):
         if partner and self.product_id:
             self.tax_id = partner.property_account_position_id.map_tax(self.product_id.taxes_id, self.product_id, partner).ids
         if self.product_id:
-            self.name = self.product_id.display_name
+            if partner:
+                self.name = self.product_id.with_context(lang=partner.lang).display_name
+            else:
+                self.name = self.product_id.display_name
             self.product_uom = self.product_id.uom_id.id
 
         warning = False

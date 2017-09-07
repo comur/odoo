@@ -8,7 +8,7 @@
 # Leon Fischer <leon.fischer621@gmail.com>, 2016
 # darenkster <inactive+darenkster@transifex.com>, 2016
 # Thorsten Vocks <thorsten.vocks@openbig.org>, 2016
-# Thomas A. Jaeger <tj@jamotion.ch>, 2016
+# Renzo Meister <info@jamotion.ch>, 2016
 # Wolfgang Taferner <wolfgang.transifex@service.wt-io-it.at>, 2016
 # Anja Funk <anja.funk@afimage.de>, 2016
 # Ermin Trevisan <trevi@twanda.com>, 2016
@@ -21,13 +21,14 @@
 # Walter Müller <inactive+WILL.I.AM@transifex.com>, 2016
 # key six <mobile.umts@gmail.com>, 2016
 # Thomas Neu <t.neu@runbox.com>, 2016
+# Andi <flimflam@salasar.de>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-14 15:53+0000\n"
 "PO-Revision-Date: 2016-11-14 15:53+0000\n"
-"Last-Translator: Thomas Neu <t.neu@runbox.com>, 2016\n"
+"Last-Translator: Andi <flimflam@salasar.de>, 2017\n"
 "Language-Team: German (https://www.transifex.com/odoo/teams/41243/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -293,7 +294,7 @@ msgstr ""
 "                                <span attrs=\"{'invisible': [('use_active_domain', '=', True)]}\">für ausgewählte Datensätze</span>\n"
 "                                <span attrs=\"{'invisible': [('use_active_domain', '=', False)]}\">für gefilterte Datensätze</span>.\n"
 "                            </span>\n"
-"                            <span attrs=\"{'invisible':['|', ('model', '=', False), ('composition_mode', '=', 'mass_mail')]}\">Beobachter des Dokuments und</span>"
+"                            <span attrs=\"{'invisible':['|', ('model', '=', False), ('composition_mode', '=', 'mass_mail')]}\">Abonnenten des Dokuments und</span>"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.email_template_form
@@ -465,7 +466,7 @@ msgstr "Gruppen hinzufügen"
 #: model:ir.ui.view,arch_db:mail.mail_wizard_invite_form
 #, python-format
 msgid "Add Followers"
-msgstr "Beobachter hinzufügen"
+msgstr "Abonnenten hinzufügen"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_email_template_preview_user_signature
@@ -628,7 +629,7 @@ msgstr ""
 #. module: mail
 #: selection:mail.alias,alias_contact:0
 msgid "Authenticated Employees"
-msgstr ""
+msgstr "Authentifizierte Mitarbeiter"
 
 #. module: mail
 #: selection:mail.alias,alias_contact:0
@@ -960,12 +961,12 @@ msgstr "Inhalte"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_channel_partner_fold_state
 msgid "Conversation Fold State"
-msgstr ""
+msgstr "Konversation in eingeklapptem Status"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_channel_partner_is_minimized
 msgid "Conversation is minimized"
-msgstr ""
+msgstr "Unterhaltung wird minimiert"
 
 #. module: mail
 #. openerp-web
@@ -1163,19 +1164,19 @@ msgstr ""
 #: model:ir.model.fields,field_description:mail.field_mail_compose_message_auto_delete
 #: model:ir.model.fields,field_description:mail.field_survey_mail_compose_message_auto_delete
 msgid "Delete Emails"
-msgstr ""
+msgstr "E-Mails löschen"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_compose_message_auto_delete_message
 #: model:ir.model.fields,field_description:mail.field_survey_mail_compose_message_auto_delete_message
 msgid "Delete Message Copy"
-msgstr ""
+msgstr "Nachrichtenkopie löschen"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_compose_message_auto_delete
 #: model:ir.model.fields,help:mail.field_survey_mail_compose_message_auto_delete
 msgid "Delete sent emails (mass mailing only)"
-msgstr ""
+msgstr "Gesendete E-Mails löschen (nur Massenmailing)"
 
 #. module: mail
 #. openerp-web
@@ -1264,11 +1265,13 @@ msgid ""
 "Do not keep a copy of the email in the document communication history (mass "
 "mailing only)"
 msgstr ""
+"Bewahren Sie keine Kopie der E-Mail in der Historie des Dokuments auf (nur "
+"Massenmailing)."
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_followers
 msgid "Document Followers"
-msgstr "Dokumentenbeobachter"
+msgstr "Dokument Abonnenten"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.email_template_form
@@ -1332,7 +1335,7 @@ msgstr "E-Mail Suche"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_message_res_partner_needaction_rel_email_status
 msgid "Email Status"
-msgstr ""
+msgstr "E-Mail Status"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_ir_act_server_template_id
@@ -1430,7 +1433,7 @@ msgstr "Fehler, ein Partner kann nicht zweimal dem gleichen Objekt folgen"
 msgid ""
 "Error: A follower must be either a partner or a channel (but not both)."
 msgstr ""
-"Fehler: Ein Beobachter muss entweder ein Partner oder ein Channels sein "
+"Fehler: Ein Abonnent muss entweder ein Partner oder ein Channels sein "
 "(jedoch nicht beides)."
 
 #. module: mail
@@ -1535,7 +1538,7 @@ msgstr "Zusammen gefaltet"
 #: code:addons/mail/static/src/xml/followers.xml:21
 #, python-format
 msgid "Follow"
-msgstr "Beobachten"
+msgstr "Abonnieren"
 
 #. module: mail
 #: model:ir.actions.act_window,name:mail.action_view_followers
@@ -1602,7 +1605,7 @@ msgstr "Beobachten"
 #: model:ir.ui.menu,name:mail.menu_email_followers
 #: model:ir.ui.view,arch_db:mail.view_followers_tree
 msgid "Followers"
-msgstr "Beobachter"
+msgstr "Abonnenten"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_account_analytic_account_message_channel_ids
@@ -1666,7 +1669,7 @@ msgstr "Beobachter"
 #: model:ir.model.fields,field_description:mail.field_stock_production_lot_message_channel_ids
 #: model:ir.model.fields,field_description:mail.field_survey_survey_message_channel_ids
 msgid "Followers (Channels)"
-msgstr "Beobachter (Kanäle)"
+msgstr "Abonnenten (Kanäle)"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_account_analytic_account_message_partner_ids
@@ -1730,24 +1733,24 @@ msgstr "Beobachter (Kanäle)"
 #: model:ir.model.fields,field_description:mail.field_stock_production_lot_message_partner_ids
 #: model:ir.model.fields,field_description:mail.field_survey_survey_message_partner_ids
 msgid "Followers (Partners)"
-msgstr "Beobachter (Partner)"
+msgstr "Abonnenten (Partner)"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.view_mail_subscription_form
 msgid "Followers Form"
-msgstr "Beobachter-Formular"
+msgstr "Abonnenten-Formular"
 
 #. module: mail
 #: selection:mail.alias,alias_contact:0
 msgid "Followers only"
-msgstr "Nur Verfolger"
+msgstr "Nur Abonnenten"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/xml/followers.xml:25
 #, python-format
 msgid "Following"
-msgstr "Beobachten"
+msgstr "Abonniert"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_email_template_preview_email_from
@@ -1806,7 +1809,7 @@ msgstr "Versteckt"
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_message_subtype_hidden
 msgid "Hide the subtype in the follower options"
-msgstr "Verberge den Untertyp in den Beobachter Optionen"
+msgstr "Verberge den Untertyp in den Abonnenten Optionen"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_email_template_preview_id
@@ -1989,7 +1992,7 @@ msgid ""
 "in the document's followers."
 msgstr ""
 "Durch die Aktivierung, erhalten alle Partner eine Mitteilung, wenn Sie als "
-"Verfolger zu einem Dokument hinzugefügt wurden."
+"Abonnent zu einem Dokument hinzugefügt wurden."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_email_template_preview_user_signature
@@ -2100,7 +2103,7 @@ msgstr "Einladung"
 #: code:addons/mail/wizard/invite.py:54
 #, python-format
 msgid "Invitation to follow %s: %s"
-msgstr "Beobachten Sie  %s: %s"
+msgstr "Abonnieren Sie  %s: %s"
 
 #. module: mail
 #. openerp-web
@@ -2115,7 +2118,7 @@ msgstr "Einladen"
 #: code:addons/mail/static/src/js/followers.js:143
 #, python-format
 msgid "Invite Follower"
-msgstr "Beobachter einladen"
+msgstr "Abonnenten einladen"
 
 #. module: mail
 #. openerp-web
@@ -2204,7 +2207,7 @@ msgstr "Nur eingeladene Personen"
 #: model:ir.model.fields,field_description:mail.field_stock_production_lot_message_is_follower
 #: model:ir.model.fields,field_description:mail.field_survey_survey_message_is_follower
 msgid "Is Follower"
-msgstr "Ist ein Beobachter"
+msgstr "Ist ein Abonnent"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_mail_notification
@@ -2219,7 +2222,7 @@ msgstr "Ist gelesen"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_channel_is_subscribed
 msgid "Is Subscribed"
-msgstr ""
+msgstr "Wird abonniert"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_channel_is_member
@@ -2406,14 +2409,14 @@ msgstr ""
 msgid ""
 "List of partners that will be added as follower of the current document."
 msgstr ""
-"Liste der Partner, die dem aktuellen Dokument als Verfolger hinzugefügt "
+"Liste der Partner, die dem aktuellen Dokument als Abonnent hinzugefügt "
 "werden."
 
 #. module: mail
 #: code:addons/mail/models/mail_channel.py:663
 #, python-format
 msgid "List users in the current channel"
-msgstr ""
+msgstr "Benutzer im aktuellen Channel auflisten"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_followers_channel_id
@@ -2442,7 +2445,7 @@ msgstr "Protokoll"
 #: code:addons/mail/static/src/xml/chatter.xml:59
 #, python-format
 msgid "Log a note. Followers will not be notified."
-msgstr "Eine Notiz erfassen. Beobachter werden benachrichtigt."
+msgstr "Eine Notiz erfassen. Abonnenten werden benachrichtigt."
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_compose_message_is_log
@@ -2465,7 +2468,7 @@ msgid ""
 "Log an internal note which will not be sent to followers, but which can be read\n"
 "                    by users accessing this document."
 msgstr ""
-"Ein interne Notiz wird nicht an Beobachter gesendet, kann aber durch andere "
+"Ein interne Notiz wird nicht an Abonnenten gesendet, kann aber durch andere "
 "Benutzer mit Zugriff auf diesen Geschäftsvorfall gelesen werden."
 
 #. module: mail
@@ -2552,7 +2555,7 @@ msgid ""
 "Members of those groups will automatically added as followers. Note that "
 "they will be able to manage their subscription manually if necessary."
 msgstr ""
-"Mitglieder dieser Gruppe werden automatisch als Beobachter hinzugefügt. "
+"Mitglieder dieser Gruppe werden automatisch als Abonnenten hinzugefügt. "
 "Beachten Sie, dass diese Ihre Nachrichteneinstellungen auch selbständig "
 "bearbeiten können."
 
@@ -2889,7 +2892,7 @@ msgstr "Neue Personen"
 #: code:addons/mail/static/src/js/followers.js:218
 #, python-format
 msgid "No follower"
-msgstr "Keine Beobachter"
+msgstr "Keine Abonnenten"
 
 #. module: mail
 #. openerp-web
@@ -2951,14 +2954,14 @@ msgstr "Benachrichtigungen"
 #: model:ir.model.fields,field_description:mail.field_mail_compose_message_notify
 #: model:ir.model.fields,field_description:mail.field_survey_mail_compose_message_notify
 msgid "Notify followers"
-msgstr "Beobachter benachrichtigen"
+msgstr "Abonnenten benachrichtigen"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_compose_message_notify
 #: model:ir.model.fields,help:mail.field_survey_mail_compose_message_notify
 msgid "Notify followers of the document (mass post only)"
 msgstr ""
-"Benachrichtigen Sie die Verfolger dieses Dokuments (nur bei Massenmail)"
+"Benachrichtigen Sie die Abonnenten dieses Dokuments (nur bei Massenmail)"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_account_analytic_account_message_needaction_counter
@@ -3164,6 +3167,8 @@ msgstr "Odoo"
 msgid ""
 "Odoo has now the permission to send you native notifications on this device."
 msgstr ""
+"Odoo hat nun die Berechtigung, Ihnen Benachrichtigungen auf diesem Gerät zu "
+"senden."
 
 #. module: mail
 #. openerp-web
@@ -3180,6 +3185,8 @@ msgid ""
 "Odoo will not have the permission to send native notifications on this "
 "device."
 msgstr ""
+"Odoo hat nicht die Berechtigung, Benachrichtigungen auf dieses Gerät zu "
+"senden."
 
 #. module: mail
 #. openerp-web
@@ -3232,7 +3239,7 @@ msgstr ""
 #: code:addons/mail/static/src/js/followers.js:220
 #, python-format
 msgid "One follower"
-msgstr "Ein Beobachter"
+msgstr "Ein Abonnent"
 
 #. module: mail
 #. openerp-web
@@ -3571,7 +3578,7 @@ msgstr "Private Kanäle"
 #: code:addons/mail/static/src/js/client_action.js:138
 #, python-format
 msgid "Public Channels"
-msgstr ""
+msgstr "Öffentliche Kanäle"
 
 #. module: mail
 #: code:addons/mail/wizard/mail_compose_message.py:180
@@ -3582,7 +3589,7 @@ msgstr "Re:"
 #. module: mail
 #: selection:mail.notification,email_status:0
 msgid "Ready to Send"
-msgstr ""
+msgstr "Bereit zum Senden"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.view_mail_search selection:mail.mail,state:0
@@ -3665,7 +3672,7 @@ msgstr ""
 #: code:addons/mail/static/src/xml/followers.xml:52
 #, python-format
 msgid "Remove this follower"
-msgstr "Beobachter löschen"
+msgstr "Abonnent löschen"
 
 #. module: mail
 #. openerp-web
@@ -3762,7 +3769,7 @@ msgstr "Geplantes Datum"
 #: model:ir.model.fields,field_description:mail.field_mail_mail_scheduled_date
 #: model:ir.ui.view,arch_db:mail.email_template_form
 msgid "Scheduled Send Date"
-msgstr ""
+msgstr "Geplantes Sendedatum"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.view_mail_alias_search
@@ -4210,7 +4217,7 @@ msgstr "An"
 #: code:addons/mail/static/src/xml/chatter.xml:20
 #, python-format
 msgid "To: Followers of"
-msgstr "An: Beobachter von"
+msgstr "An: Abonnenten von"
 
 #. module: mail
 #. openerp-web
@@ -4284,6 +4291,8 @@ msgstr "UUID"
 #, python-format
 msgid "Unable to send email, please configure the sender's email address."
 msgstr ""
+"Es ist nicht möglich, E-Mails zu versenden, bitte geben Sie die E-Mail-"
+"Adresse des Absenders an."
 
 #. module: mail
 #. openerp-web
@@ -4298,7 +4307,7 @@ msgstr "Rückgängig"
 #: code:addons/mail/static/src/xml/followers.xml:23
 #, python-format
 msgid "Unfollow"
-msgstr "Nicht mehr beobachten"
+msgstr "Nicht mehr abonnieren"
 
 #. module: mail
 #: sql_constraint:mail.alias:0
@@ -4564,7 +4573,7 @@ msgstr "Wenn die Nachricht eine interne Notiz ist (Kommentar Modus)"
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.mail_channel_view_form
 msgid "Who can follow the group's activities?"
-msgstr "Wer kann Ihre Gruppen-Aktivitäten beobachten?"
+msgstr "Wer kann Ihre Gruppen-Aktivitäten abonnieren?"
 
 #. module: mail
 #. openerp-web
@@ -4591,7 +4600,7 @@ msgstr "Sie haben <b>%s</b> zur Konversation hinzugefügt."
 #: code:addons/mail/models/mail_channel.py:673
 #, python-format
 msgid "You are alone in this channel."
-msgstr ""
+msgstr "Sie sind allein in diesem Kanal."
 
 #. module: mail
 #: code:addons/mail/models/mail_channel.py:642
@@ -4725,7 +4734,7 @@ msgstr "durch"
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.message_origin_link
 msgid "created"
-msgstr ""
+msgstr "angelegt"
 
 #. module: mail
 #: code:addons/mail/models/mail_thread.py:313
@@ -4745,7 +4754,7 @@ msgstr "Bildschirmbenachrichtigungen aktivieren"
 #: code:addons/mail/static/src/js/followers.js:222
 #, python-format
 msgid "followers"
-msgstr "Beobachter"
+msgstr "Abonnenten"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.message_origin_link
@@ -4811,7 +4820,7 @@ msgstr ""
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.message_origin_link
 msgid "modified"
-msgstr ""
+msgstr "modifiziert"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.view_general_configuration_mail_alias_domain
