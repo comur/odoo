@@ -112,10 +112,11 @@ class PublisherWarrantyContract(AbstractModel):
                 except Exception:
                     pass
             if result.get('enterprise_info'):
+                pass
                 # Update expiration date
-                self.env['ir.config_parameter'].sudo().set_param('database.expiration_date', result['enterprise_info'].get('expiration_date'), ['base.group_user'])
-                self.env['ir.config_parameter'].sudo().set_param('database.expiration_reason', result['enterprise_info'].get('expiration_reason', 'trial'), ['base.group_system'])
-                self.env['ir.config_parameter'].sudo().set_param('database.enterprise_code', result['enterprise_info'].get('enterprise_code'), ['base.group_user'])
+#                self.env['ir.config_parameter'].sudo().set_param('database.expiration_date', result['enterprise_info'].get('expiration_date'), ['base.group_user'])
+ #               self.env['ir.config_parameter'].sudo().set_param('database.expiration_reason', result['enterprise_info'].get('expiration_reason', 'trial'), ['base.group_system'])
+  #              self.env['ir.config_parameter'].sudo().set_param('database.enterprise_code', result['enterprise_info'].get('enterprise_code'), ['base.group_user'])
 
         except Exception:
             if cron_mode:
