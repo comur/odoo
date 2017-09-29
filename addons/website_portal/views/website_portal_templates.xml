@@ -193,9 +193,6 @@
     </template>
 
     <template id="my_account_link" name="Link to frontend portal" inherit_id="website.layout">
-        <xpath expr="//li[@id='o_logout']" position="before">
-            <li><a href="/my/home" role="menuitem">My Account</a></li>
-        </xpath>
     </template>
 
 </odoo>

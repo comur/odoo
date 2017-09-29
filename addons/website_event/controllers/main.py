@@ -29,7 +29,7 @@ class WebsiteEventController(http.Controller):
 
         def sd(date):
             return fields.Datetime.to_string(date)
-        today = datetime.today()
+        today = datetime.today()#-timedelta(1050)
         dates = [
             ['all', _('Next Events'), [("date_end", ">", sd(today))], 0],
             ['today', _('Today'), [

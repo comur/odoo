@@ -17,9 +17,9 @@
 
 <!-- Layout add nav and footer -->
 <template id="header_footer_custom" inherit_id="website.footer_default" name="Footer Events Link">
-    <xpath expr="//ul[@id='products']" position="inside">
+    <!--xpath expr="//ul[@id='products']" position="inside">
         <li><a href="/event">Events</a></li>
-    </xpath>
+    </xpath-->
 </template>
 
 <!-- Page -->
