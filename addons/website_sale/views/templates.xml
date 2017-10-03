@@ -216,7 +216,7 @@
     </template>
 
     <template id="sort" inherit_id="website_sale.products" active="True" customize_show="True" name="Show Sort by">
-        <xpath expr="//div[@class='products_pager']/div/t[@t-call][last()]" position="after">
+        <!-- path expr="//div[@class='products_pager']/div/t[@t-call][last()]" position="after">
             <t t-set="list_price_desc_label">Catalog price: decreasing order</t>
             <t t-set="list_price_asc_label">Catalog price: increasing order</t>
             <t t-set="name_asc_label">Name</t>
@@ -238,7 +238,7 @@
                     </li>
                 </ul>
             </div>
-        </xpath>
+        </xpath-->
     </template>
 
 
