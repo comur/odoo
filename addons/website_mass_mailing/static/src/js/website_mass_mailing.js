@@ -23,7 +23,9 @@ animation.registry.subscribe = animation.Class.extend({
             self.$target.find('a.js_subscribe_btn')
                 .attr("disabled", data.is_subscriber && data.email.length ? "disabled" : false);
             self.$target.removeClass("hidden");
+            /* modif DC
             self.$target.find('.js_subscribe_btn').toggleClass('hidden', !!data.is_subscriber);
+            */
             self.$target.find('.js_subscribed_btn').toggleClass('hidden', !data.is_subscriber);
         });
 
@@ -51,9 +53,15 @@ animation.registry.subscribe = animation.Class.extend({
             'list_id': this.$target.data('list-id'),
             'email': $email.length ? $email.val() : false,
         }).then(function (subscribe) {
+            /*
             self.$target.find(".js_subscribe_email, .input-group-btn").addClass("hidden");
+            */
             self.$target.find(".alert").removeClass("hidden");
+            /*
             self.$target.find('input.js_subscribe_email').attr("disabled", subscribe ? "disabled" : false);
+            */
+            self.$target.find('input.js_subscribe_email, input.js_subscribe_email + [type="submit"]').attr("disabled", subscribe ? "disabled" : false);
+
             self.$target.attr("data-subscribe", subscribe ? 'on' : 'off');
         });
     },
