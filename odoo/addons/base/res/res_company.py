@@ -171,6 +171,14 @@ class Company(models.Model):
         ('name_uniq', 'unique (name)', 'The company name must be unique !')
     ]
 
+    @api.multi
+    def name_get(self):
+        res = []
+        for company in self:
+            name = "Test-" + company.partner_id.name or ''
+            res.append((company.id, name))
+        return res
+
     # TODO @api.depends(): currently now way to formulate the dependency on the
     # partner's contact address
     def _compute_address(self):
