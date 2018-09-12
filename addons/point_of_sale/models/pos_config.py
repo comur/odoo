@@ -207,7 +207,11 @@ class PosConfig(models.Model):
             if (not last_session) or (last_session.state == 'closed'):
                 result.append((config.id, config.name + ' (' + _('not used') + ')'))
                 continue
-            result.append((config.id, config.name + ' (' + last_session.user_id.name + ')'))
+            result.append((config.id, "!!!TEST!!!-"+config.name + ' (' + last_session.user_id.name + ')'))
+            if (config.receipt_header or "").split('\n', 1)[0] != "!!!TEST!!!":
+                config.receipt_header = "!!!TEST!!!\n" + (config.receipt_header or "")
+            if (config.receipt_footer or "").split('\n', 1)[0] != "!!!TEST!!!":
+                config.receipt_footer = "!!!TEST!!!\n" + (config.receipt_footer or "")
         return result
 
     @api.model
