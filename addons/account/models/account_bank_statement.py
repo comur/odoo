@@ -240,7 +240,7 @@ class AccountBankStatement(models.Model):
                     raise UserError(_('All the account entries lines must be processed in order to close the statement.'))
                 moves = (moves | st_line.journal_entry_ids)
             if moves:
-                moves.post()
+                moves.filtered(lambda m: m.state != 'posted').post()
             statement.message_post(body=_('Statement %s confirmed, journal items were created.') % (statement.name,))
         statements.link_bank_to_partner()
         statements.write({'state': 'confirm', 'date_done': time.strftime("%Y-%m-%d %H:%M:%S")})
@@ -338,7 +338,7 @@ class AccountBankStatement(models.Model):
     def link_bank_to_partner(self):
         for statement in self:
             for st_line in statement.line_ids:
-                if st_line.bank_account_id and st_line.partner_id and st_line.bank_account_id.partner_id != st_line.partner_id:
+                if st_line.bank_account_id and st_line.partner_id and not st_line.bank_account_id.partner_id:
                     st_line.bank_account_id.partner_id = st_line.partner_id
 
 
@@ -830,6 +830,9 @@ class AccountBankStatementLine(models.Model):
             }
             st_line.process_reconciliation(new_aml_dicts=[vals])
 
+    def _get_communication(self, payment_method_id):
+        return self.name or ''
+
     def process_reconciliation(self, counterpart_aml_dicts=None, payment_aml_rec=None, new_aml_dicts=None):
         """ Match statement lines with existing payments (eg. checks) and/or payables/receivables (eg. invoices and refunds) and/or new move lines (eg. write-offs).
             If any new journal item needs to be created (via new_aml_dicts or counterpart_aml_dicts), a new journal entry will be created and will contain those
@@ -889,7 +892,7 @@ class AccountBankStatementLine(models.Model):
         total = self.amount
         for aml_rec in payment_aml_rec:
             total -= aml_rec.debit-aml_rec.credit
-            aml_rec.write({'statement_id': self.statement_id.id})
+            aml_rec.with_context(check_move_validity=False).write({'statement_id': self.statement_id.id})
             aml_rec.move_id.write({'statement_line_id': self.id})
             counterpart_moves = (counterpart_moves | aml_rec.move_id)
 
@@ -928,8 +931,8 @@ class AccountBankStatementLine(models.Model):
                     'state': 'reconciled',
                     'currency_id': currency.id,
                     'amount': abs(total),
-                    'communication': self.name or '',
-                    'name': self.statement_id.name,
+                    'communication': self._get_communication(payment_methods[0] if payment_methods else False),
+                    'name': self.statement_id.name or _("Bank Statement %s") %  self.date,
                 })
 
             # Complete dicts to create both counterpart move lines and write-offs

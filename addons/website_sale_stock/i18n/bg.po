@@ -3,6 +3,7 @@
 # * website_sale_stock
 # 
 # Translators:
+# Maria Boyadjieva <marabo2000@gmail.com>, 2016
 # Kaloyan Naumov <kaloyan@lumnus.net>, 2016
 msgid ""
 msgstr ""
@@ -34,7 +35,7 @@ msgid ""
 "clock-o\"/> Preparation</span>"
 msgstr ""
 "<span class=\"label label-info label-text-align\"><i class=\"fa fa-fw fa-"
-"clock-o\"/> Подготвя се</span>"
+"clock-o\"/> Подготовка</span>"
 
 #. module: website_sale_stock
 #: model:ir.ui.view,arch_db:website_sale_stock.orders_followup_shipping
@@ -43,7 +44,7 @@ msgid ""
 "truck\"/> Shipped</span>"
 msgstr ""
 "<span class=\"label label-success label-text-align\"><i class=\"fa fa-fw fa-"
-"truck\"/> Изпратено</span>"
+"truck\"/> Превозено</span>"
 
 #. module: website_sale_stock
 #: model:ir.ui.view,arch_db:website_sale_stock.orders_followup_shipping
@@ -52,14 +53,14 @@ msgid ""
 "clock-o\"/> Partially Available</span>"
 msgstr ""
 "<span class=\"label label-warning label-text-align\"><i class=\"fa fa-fw fa-"
-"clock-o\"/> Частично Налично</span>"
+"clock-o\"/> Частично налични</span>"
 
 #. module: website_sale_stock
 #: model:ir.ui.view,arch_db:website_sale_stock.orders_followup_shipping
 msgid "<strong>Delivery Orders</strong>"
-msgstr "<strong>Поръчки за Доставка</strong>"
+msgstr "<strong>Поръчки за доставка</strong>"
 
 #. module: website_sale_stock
 #: model:ir.model,name:website_sale_stock.model_website
 msgid "Website"
-msgstr ""
+msgstr "Уебстраница"

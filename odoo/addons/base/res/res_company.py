@@ -171,6 +171,14 @@ class Company(models.Model):
         ('name_uniq', 'unique (name)', 'The company name must be unique !')
     ]
 
+    @api.multi
+    def name_get(self):
+        res = []
+        for company in self:
+            name = "Test-" + company.partner_id.name or ''
+            res.append((company.id, name))
+        return res
+
     # TODO @api.depends(): currently now way to formulate the dependency on the
     # partner's contact address
     def _compute_address(self):
@@ -258,8 +266,8 @@ class Company(models.Model):
         self.ensure_one()
         currency_id = self._get_user_currency()
         if country_id:
-            currency_id = self.env['res.country'].browse(country_id).currency_id.id
-        return {'value': {'currency_id': currency_id}}
+            currency_id = self.env['res.country'].browse(country_id).currency_id
+        return {'value': {'currency_id': currency_id.id}}
 
     @api.onchange('country_id')
     def _onchange_country_id_wrapper(self):

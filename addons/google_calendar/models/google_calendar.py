@@ -844,7 +844,7 @@ class GoogleCalendar(models.AbstractModel):
                         try:
                             # if already deleted from gmail or never created
                             recs.delete_an_event(current_event[0])
-                        except Exception, e:
+                        except urllib2.HTTPError, e:
                             if e.code in (401, 410,):
                                 pass
                             else:
@@ -922,7 +922,7 @@ class GoogleCalendar(models.AbstractModel):
 
     def get_minTime(self):
         number_of_week = self.env['ir.config_parameter'].get_param('calendar.week_synchro', default=13)
-        return datetime.now() - timedelta(weeks=number_of_week)
+        return datetime.now() - timedelta(weeks=int(number_of_week))
 
     def get_need_synchro_attendee(self):
         return self.env['ir.config_parameter'].get_param('calendar.block_synchro_attendee', default=True)

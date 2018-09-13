@@ -113,6 +113,17 @@ class SaleOrder(models.Model):
         """ Add or set product quantity, add_qty can be negative """
         self.ensure_one()
         SaleOrderLineSudo = self.env['sale.order.line'].sudo()
+
+        try:
+            if add_qty:
+                add_qty = float(add_qty)
+        except ValueError:
+            add_qty = 1
+        try:
+            if set_qty:
+                set_qty = float(set_qty)
+        except ValueError:
+            set_qty = 0
         quantity = 0
         order_line = False
         if self.state != 'draft':
@@ -182,7 +193,7 @@ class Website(models.Model):
     _inherit = 'website'
 
     pricelist_id = fields.Many2one('product.pricelist', compute='_compute_pricelist_id', string='Default Pricelist')
-    currency_id = fields.Many2one('res.currency', related='pricelist_id.currency_id', string='Default Currency')
+    currency_id = fields.Many2one('res.currency', related='pricelist_id.currency_id', related_sudo=False, string='Default Currency')
     salesperson_id = fields.Many2one('res.users', string='Salesperson')
     salesteam_id = fields.Many2one('crm.team', string='Sales Team')
     pricelist_ids = fields.One2many('product.pricelist', compute="_compute_pricelist_ids",
@@ -228,8 +239,8 @@ class Website(models.Model):
 
         if not pricelists:  # no pricelist for this country, or no GeoIP
             pricelists |= all_pl.filtered(lambda pl: not show_visible or pl.selectable or pl.id in (current_pl, order_pl))
-        else:
-            pricelists |= all_pl.filtered(lambda pl: not show_visible and pl.sudo().code)
+        if not show_visible and not country_code:
+            pricelists |= all_pl.filtered(lambda pl: pl.sudo().code)
 
         # This method is cached, must not return records! See also #8795
         return pricelists.ids
@@ -245,12 +256,13 @@ class Website(models.Model):
         :param bool show_visible: if True, we don't display pricelist where selectable is False (Eg: Code promo)
         :returns: pricelist recordset
         """
-        website = request and request.website or None
+        website = request and hasattr(request, 'website') and request.website or None
         if not website:
             if self.env.context.get('website_id'):
                 website = self.browse(self.env.context['website_id'])
             else:
-                website = self.search([], limit=1)
+                # In the weird case we are coming from the backend (https://github.com/odoo/odoo/issues/20245)
+                website = len(self) == 1 and self or self.search([], limit=1)
         isocountry = request and request.session.geoip and request.session.geoip.get('country_code') or False
         partner = self.env.user.partner_id
         order_pl = partner.last_website_so_id and partner.last_website_so_id.state == 'draft' and partner.last_website_so_id.pricelist_id

@@ -2,12 +2,19 @@
 # This file contains the translation of the following modules:
 # * rating
 # 
+# Translators:
+# 최재호 <hwangtog@gmail.com>, 2017
+# Martin Trigaux, 2017
+# 종현 엄 <whd5367@naver.com>, 2017
+# Link Up링크업 <linkup.way@gmail.com>, 2018
+# Linkup <link-up@naver.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-29 14:00+0000\n"
 "PO-Revision-Date: 2016-09-29 14:00+0000\n"
+"Last-Translator: Linkup <link-up@naver.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,34 +63,34 @@ msgstr ""
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_rating_create_uid
 msgid "Created by"
-msgstr ""
+msgstr "작성자"
 
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_rating_create_date
 msgid "Created on"
-msgstr ""
+msgstr "작성일"
 
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_rating_partner_id
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
 msgid "Customer"
-msgstr ""
+msgstr "고객"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
 msgid "Day"
-msgstr ""
+msgstr "일"
 
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_mixin_display_name
 #: model:ir.model.fields,field_description:rating.field_rating_rating_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "표시 이름"
 
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_rating_res_id
 msgid "Document ID"
-msgstr ""
+msgstr "문서 ID"
 
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_rating_res_model
@@ -113,12 +120,12 @@ msgstr ""
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
 msgid "Group By"
-msgstr ""
+msgstr "그룹화"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
 msgid "Happy"
-msgstr ""
+msgstr "좋음"
 
 #. module: rating
 #. openerp-web
@@ -152,7 +159,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:rating.field_rating_mixin_id
 #: model:ir.model.fields,field_description:rating.field_rating_rating_id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: rating
 #: model:ir.model.fields,help:rating.field_rating_rating_res_id
@@ -170,17 +177,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:rating.field_rating_mixin___last_update
 #: model:ir.model.fields,field_description:rating.field_rating_rating___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "최근 수정"
 
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_rating_write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "최근 갱신한 사람"
 
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_rating_write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "최근 갱신 날짜"
 
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_rating_message_id
@@ -195,7 +202,7 @@ msgstr ""
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
 msgid "Month"
-msgstr ""
+msgstr "월"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
@@ -233,7 +240,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:rating.field_rating_rating_rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
 msgid "Rating"
-msgstr ""
+msgstr "평가"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_graph
@@ -282,27 +289,27 @@ msgstr ""
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
 msgid "Ratings"
-msgstr ""
+msgstr "평가"
 
 #. module: rating
 #: model:ir.model.fields,help:rating.field_rating_rating_feedback
 msgid "Reason of the rating"
-msgstr ""
+msgstr "평가를 하는 이유"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
 msgid "Resource"
-msgstr ""
+msgstr "자원"
 
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_rating_res_name
 msgid "Resource Name"
-msgstr ""
+msgstr "리소스명"
 
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_rating_access_token
 msgid "Security Token"
-msgstr ""
+msgstr "보안토큰"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.rating_external_page_submit
@@ -322,7 +329,7 @@ msgstr ""
 #. module: rating
 #: model:ir.actions.act_window,help:rating.action_view_rating
 msgid "There is no rating for this object at the moment."
-msgstr ""
+msgstr "현재 이 대상에 대한 평가가 없습니다."
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
@@ -342,7 +349,7 @@ msgstr ""
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
 msgid "Year"
-msgstr ""
+msgstr "년"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.rating_external_page_submit
@@ -352,7 +359,7 @@ msgstr ""
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.rating_external_page_submit
 msgid "by"
-msgstr ""
+msgstr "작성자"
 
 #. module: rating
 #: code:addons/rating/controllers/main.py:21

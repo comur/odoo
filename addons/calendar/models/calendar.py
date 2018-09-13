@@ -401,7 +401,7 @@ class AlarmManager(models.AbstractModel):
 
         result = False
         if alarm.type == 'email':
-            result = meeting.attendee_ids._send_mail_to_attendees('calendar.calendar_template_meeting_reminder', force_send=True)
+            result = meeting.attendee_ids.filtered(lambda r: r.state != 'declined')._send_mail_to_attendees('calendar.calendar_template_meeting_reminder', force_send=True)
         return result
 
     def do_notif_reminder(self, alert):
@@ -816,8 +816,8 @@ class Meeting(models.Model):
                 startdate = startdate.astimezone(pytz.utc)  # Convert to UTC
                 meeting.start = fields.Datetime.to_string(startdate)
             else:
-                meeting.start = meeting.start_datetime
-                meeting.stop = meeting.stop_datetime
+                meeting.write({'start': meeting.start_datetime,
+                               'stop': meeting.stop_datetime})
 
     @api.depends('byday', 'recurrency', 'final_date', 'rrule_type', 'month_by', 'interval', 'count', 'end_type', 'mo', 'tu', 'we', 'th', 'fr', 'sa', 'su', 'day', 'week_list')
     def _compute_rrule(self):
@@ -842,7 +842,7 @@ class Meeting(models.Model):
     @api.multi
     def _compute_color_partner(self):
         for meeting in self:
-            meeting.color_partner_id = meeting.user_id.partner_id.id
+            meeting.color_partner_id = meeting.sudo().user_id.partner_id.id
 
     @api.constrains('start_datetime', 'stop_datetime', 'start_date', 'stop_date')
     def _check_closing_date(self):
@@ -858,6 +858,16 @@ class Meeting(models.Model):
             start = fields.Datetime.from_string(self.start_datetime)
             self.start = self.start_datetime
             self.stop = fields.Datetime.to_string(start + timedelta(hours=self.duration))
+
+    @api.onchange('start_date')
+    def _onchange_start_date(self):
+        if self.start_date:
+            self.start = self.start_date
+
+    @api.onchange('stop_date')
+    def _onchange_stop_date(self):
+        if self.stop_date:
+            self.stop = self.stop_date
 
     ####################################################
     # Calendar Business, Reccurency, ...
@@ -1415,7 +1425,7 @@ class Meeting(models.Model):
                     partners_to_notify = meeting.partner_ids.ids
                     event_attendees_changes = attendees_create and real_ids and attendees_create[real_ids[0]]
                     if event_attendees_changes:
-                        partners_to_notify.append(event_attendees_changes['removed_partners'].ids)
+                        partners_to_notify.extend(event_attendees_changes['removed_partners'].ids)
                     self.env['calendar.alarm_manager'].notify_next_alarm(partners_to_notify)
 
             if (values.get('start_date') or values.get('start_datetime') or
@@ -1469,7 +1479,7 @@ class Meeting(models.Model):
     @api.multi
     def read(self, fields=None, load='_classic_read'):
         fields2 = fields and fields[:] or None
-        EXTRAFIELDS = ('privacy', 'user_id', 'duration', 'allday', 'start', 'start_date', 'start_datetime', 'rrule')
+        EXTRAFIELDS = ('privacy', 'user_id', 'duration', 'allday', 'start', 'rrule')
         for f in EXTRAFIELDS:
             if fields and (f not in fields):
                 fields2.append(f)

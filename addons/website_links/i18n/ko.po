@@ -2,12 +2,17 @@
 # This file contains the translation of the following modules:
 # * website_links
 # 
+# Translators:
+# 최재호 <hwangtog@gmail.com>, 2017
+# Martin Trigaux, 2017
+# Seongseok Shin <shinss61@hotmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-19 12:36+0000\n"
 "PO-Revision-Date: 2016-09-19 12:36+0000\n"
+"Last-Translator: Seongseok Shin <shinss61@hotmail.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,21 +25,21 @@ msgstr ""
 #: code:addons/website_links/static/src/js/website_links_charts.js:53
 #, python-format
 msgid " clicks"
-msgstr ""
+msgstr "클릭"
 
 #. module: website_links
 #. openerp-web
 #: code:addons/website_links/static/src/js/website_links_charts.js:104
 #, python-format
 msgid " countries"
-msgstr ""
+msgstr "국가"
 
 #. module: website_links
 #. openerp-web
 #: code:addons/website_links/static/src/js/website_links_charts.js:57
 #, python-format
 msgid "# of clicks"
-msgstr ""
+msgstr "클릭 수"
 
 #. module: website_links
 #: model:ir.ui.view,arch_db:website_links.share_page_menu
@@ -96,7 +101,7 @@ msgstr ""
 #: code:addons/website_links/static/src/js/website_links.js:350
 #, python-format
 msgid "Generating link..."
-msgstr ""
+msgstr "링크 생성중..."
 
 #. module: website_links
 #: model:ir.ui.view,arch_db:website_links.create_shorten_url
@@ -106,18 +111,18 @@ msgstr ""
 #. module: website_links
 #: model:ir.ui.view,arch_db:website_links.graphs
 msgid "Last Month"
-msgstr ""
+msgstr "지난 달"
 
 #. module: website_links
 #: model:ir.ui.view,arch_db:website_links.graphs
 msgid "Last Week"
-msgstr ""
+msgstr "지난 주"
 
 #. module: website_links
 #: model:ir.ui.view,arch_db:website_links.create_shorten_url
 #: model:ir.ui.view,arch_db:website_links.graphs
 msgid "Link Tracker"
-msgstr ""
+msgstr "링크 트랙커"
 
 #. module: website_links
 #: model:ir.ui.view,arch_db:website_links.create_shorten_url
@@ -135,7 +140,7 @@ msgstr ""
 #. module: website_links
 #: model:ir.ui.view,arch_db:website_links.create_shorten_url
 msgid "Newest"
-msgstr ""
+msgstr "최신"
 
 #. module: website_links
 #: model:ir.ui.view,arch_db:website_links.create_shorten_url
@@ -160,14 +165,14 @@ msgstr ""
 #. module: website_links
 #: model:ir.ui.view,arch_db:website_links.graphs
 msgid "Statistics"
-msgstr ""
+msgstr "통계"
 
 #. module: website_links
 #. openerp-web
 #: code:addons/website_links/static/src/xml/recent_link.xml:38
 #, python-format
 msgid "Stats"
-msgstr ""
+msgstr "통계"
 
 #. module: website_links
 #. openerp-web
@@ -188,7 +193,7 @@ msgstr ""
 #. module: website_links
 #: model:ir.ui.view,arch_db:website_links.create_shorten_url
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #. module: website_links
 #. openerp-web
@@ -202,7 +207,7 @@ msgstr ""
 #: code:addons/website_links/static/src/js/website_links_charts.js:99
 #, python-format
 msgid "Undefined"
-msgstr ""
+msgstr "정의되지 않음"
 
 #. module: website_links
 #. openerp-web
@@ -222,14 +227,14 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_links.graphs
 #, python-format
 msgid "cancel"
-msgstr ""
+msgstr "취소"
 
 #. module: website_links
 #. openerp-web
 #: code:addons/website_links/static/src/xml/recent_link.xml:8
 #, python-format
 msgid "clicks"
-msgstr ""
+msgstr "클릭"
 
 #. module: website_links
 #: model:ir.ui.view,arch_db:website_links.graphs
@@ -241,7 +246,7 @@ msgstr ""
 #: code:addons/website_links/static/src/js/website_links.js:259
 #, python-format
 msgid "e.g. Newsletter, Social Network, .."
-msgstr ""
+msgstr "예) 뉴스레터, 소셜 네트워크,.."
 
 #. module: website_links
 #. openerp-web
@@ -276,4 +281,4 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_links.graphs
 #, python-format
 msgid "or"
-msgstr ""
+msgstr "또는"

@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2016
-# Martin Trigaux <mat@odoo.com>, 2016
+# Martin Trigaux, 2016
 # Timo Koukkari <ti.ko@netikka.fi>, 2016
 # Atte Isopuro <atte.isopuro@web-veistamo.fi>, 2016
 # Tuomo Aura <tuomo.aura@web-veistamo.fi>, 2016
@@ -48,13 +48,13 @@ msgstr "# Tuotteita"
 #: code:addons/product/models/product_pricelist.py:438
 #, python-format
 msgid "%s %% discount"
-msgstr ""
+msgstr "%s %% alennus"
 
 #. module: product
 #: code:addons/product/models/product_pricelist.py:440
 #, python-format
 msgid "%s %% discount and %s surcharge"
-msgstr ""
+msgstr "%s %% alennus ja %s lisämaksu"
 
 #. module: product
 #: code:addons/product/models/product_template.py:302
@@ -111,6 +111,12 @@ msgid ""
 "                Intel Iris Pro graphics\n"
 "            "
 msgstr ""
+"2.7GHz quad-core Intel Core i5\n"
+"                Turbo Boost up to 3.2GHz\n"
+"                8GB (two 4GB) memory\n"
+"                1TB hard drive\n"
+"                Intel Iris Pro graphics\n"
+"            "
 
 #. module: product
 #: model:product.attribute.value,name:product.product_attribute_value_2
@@ -148,11 +154,14 @@ msgid ""
 "                            <span attrs=\"{'invisible':[('base', '!=', 'standard_price')]}\">Cost  -  </span>\n"
 "                            <span attrs=\"{'invisible':[('base', '!=', 'pricelist')]}\">Other Pricelist  -  </span>"
 msgstr ""
+"<span attrs=\"{'invisible':[('base', '!=', 'list_price')]}\">Julkinen hinta  -  </span>\n"
+"                            <span attrs=\"{'invisible':[('base', '!=', 'standard_price')]}\">Kulu  -  </span>\n"
+"                            <span attrs=\"{'invisible':[('base', '!=', 'pricelist')]}\">Toinen hinnasto  -  </span>"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_category_form_view
 msgid "<span class=\"o_stat_text\"> Products</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\"> Tuotteet</span>"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view
@@ -194,7 +203,7 @@ msgstr ""
 #: code:addons/product/models/product.py:167 sql_constraint:product.product:0
 #, python-format
 msgid "A barcode can only be assigned to one product !"
-msgstr ""
+msgstr "Samaa viivakoodia ei voi käyttää useassa tuotteessa!"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_category_type
@@ -340,7 +349,7 @@ msgstr "Saatavilla"
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_applied_on
 msgid "Apply On"
-msgstr ""
+msgstr "Vaikutus"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_view_search
@@ -725,7 +734,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:product.field_product_template_standard_price
 #: selection:product.pricelist.item,base:0
 msgid "Cost"
-msgstr "Kulut"
+msgstr "Kustannushinta"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_standard_price
@@ -739,6 +748,7 @@ msgstr ""
 #: model:ir.model.fields,help:product.field_product_template_standard_price
 msgid "Cost of the product, in the default unit of measure of the product."
 msgstr ""
+"Tuotteen omakustannushinta ilmoitettuna tuotteen oletus mittayksikössä."
 
 #. module: product
 #: model:product.product,name:product.service_delivery
@@ -1092,7 +1102,7 @@ msgstr ""
 #. module: product
 #: selection:product.pricelist.item,compute_price:0
 msgid "Fix Price"
-msgstr ""
+msgstr "Kiinteä hinta"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_fixed_price
@@ -1520,7 +1530,7 @@ msgstr "Hallitse useita (mitta)yksiköitä"
 #. module: product
 #: model:res.groups,name:product.group_pricelist_item
 msgid "Manage Pricelist Items"
-msgstr ""
+msgstr "Hallitse hinnaston rivejä"
 
 #. module: product
 #: model:res.groups,name:product.group_stock_packaging
@@ -1704,7 +1714,7 @@ msgstr "Kumppani"
 #. module: product
 #: selection:product.pricelist.item,compute_price:0
 msgid "Percentage (discount)"
-msgstr ""
+msgstr "Alennusprosentti"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_percent_price
@@ -1836,7 +1846,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:product.product_pricelist_view
 #: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "Pricelist Items"
-msgstr ""
+msgstr "Hinnaston rivejä"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_name
